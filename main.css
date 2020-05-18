@@ -1,0 +1,126 @@
+p {
+  margin: 0;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+}
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#app header {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#app header .h-left,
+#app header .h-right {
+  width: 5rem;
+  text-align: center;
+}
+#app header .h-left {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+#app .content {
+  width: 95vw;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#app .content .goods {
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 1px rgba(34, 34, 34, 0.2);
+}
+#app .content .goods .shop {
+  border: rgba(34, 34, 34, 0.2) 1px solid;
+  border-radius: 5px;
+  padding: 0.5rem 0 0 0;
+  width: 100%;
+}
+#app .content .goods .shop .head {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2rem;
+  border-bottom: 1px rgba(34, 34, 34, 0.2) solid;
+}
+#app .content .goods .shop .head .check {
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#app .content .goods .shop .good {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+#app .content .goods .shop .good .g-left {
+  width: 3rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#app .content .goods .shop .good .g-center {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+}
+#app .content .goods .shop .good .g-center img {
+  width: 4rem;
+  height: 4rem;
+}
+#app .content .goods .shop .good .g-right {
+  height: 5rem;
+  flex: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+#app .content .goods .shop .good .g-right .price .count {
+  float: right;
+  margin-right: 1rem;
+}
+#app footer {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -1px 0.2px rgba(34, 34, 34, 0.2);
+}
+#app footer .f-left {
+  width: 5rem;
+  text-align: center;
+}
+#app footer .f-right {
+  margin-right: 1.5rem;
+  text-align: center;
+  line-height: 3rem;
+}
+#app footer .f-right .btn {
+  display: inline-block;
+  width: 5rem;
+  height: 3rem;
+  color: white;
+  background-color: orange;
+  border-radius: 1.5rem;
+}

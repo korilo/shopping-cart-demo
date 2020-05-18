@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车案例</title>
+    
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="h-left">
+                <p>购物车</p>
+            </div>
+            <div class="h-right">
+                <p @click="tabControl" ref="control">管理</p>
+            </div>
+        </header>
+
+        <!-- 内容 -->
+        <div class="content">
+            <div class="goods" v-for="shop in goodsList">
+                <div class="shop">
+                    <div class="head">
+                        <div class="check">
+                            <input type="checkbox" v-model="shop.selected" @change="shopChange(shop)">
+                        </div>                   
+                        <p>{{shop.shopName}}</p>
+                    </div>
+                    <div class="good" v-for="good in shop.goods">
+                        <div class="g-left">
+                            <input type="checkbox" :value="good.name" v-model="good.selected" @change="itemChange(shop)">
+                        </div>
+                        <div class="g-center">
+                            <img :src="good.pic" >
+                        </div>
+                        <div class="g-right">
+                            <p>{{good.name}}</p>
+                            <div class="price">
+                                <span >{{'￥'+ good.price}}</span>
+                                <span class="count">
+                                    <button @click="reduce(good)">-</button>
+                                    <span>{{good.count}}</span>
+                                    <button @click="add(good)">+</button>
+                                </span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+
+
+        <!-- 结算栏 -->
+        <footer>
+            <div class="f-left">
+                <input type="checkbox" v-model="selectAll" @change="listChange">
+                <span>全选</span> 
+            </div>
+            <div class="f-right" v-show="!control">
+                <span>合计: ￥{{totalPrice}}</span>
+                <span class="btn">结算<span v-show="totalItems>0">{{totalItems}}</span></span>
+            </div>
+            <div class="f-right" v-show="control">
+               
+                <span class="btn" @click="del">删除</span>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+
+
+<link rel="stylesheet" href="./main.css">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./main.js"></script>
+
+
+</html>

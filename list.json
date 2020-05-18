@@ -1,0 +1,46 @@
+{
+    "shopping":[
+        {
+            "shopName": "a超市",
+            "selected":false,
+            "goods":[
+                {
+                    "name":"康师傅方便面（牛肉味）",
+                    "price": 2.5,
+                    "count": 4,
+                    "selected":false,
+                    "pic":"./img/01.jpg"
+                },
+                {
+                    "name":"康师傅方便面（老坛酸菜味）",
+                    "price": 3.5,
+                    "count": 1,
+                    "selected":false,
+                    "pic":"./img/02.jpg"
+                }
+            ]
+        },
+        {
+            "shopName": "b超市",
+            "goods":[
+                {
+                    "name":"康师傅方便面（香菇味）",
+                    "price": 2.5,
+                    "count": 1,
+                    "selected":false,
+                    "pic":"./img/03.jpg"
+                },
+                {
+                    "name":"康师傅方便面（排骨味）",
+                    "price": 2.5,
+                    "count": 2,
+                    "selected":false,
+                    "pic":"./img/04.jpg"
+                }
+            ]
+        }
+        
+
+    ]
+   
+}
